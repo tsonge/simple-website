@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  box-sizing: border-box;
+}
+
+.banner {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('fish.jpg');
+  background-repeat: no-repeat;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerContent{
+  padding: 20px 40px;
+  /* background-color: rgba(0,0,0,0.5); */
+  text-align: center;
+  color: white;
+  font-size: 60px;
+}
+
+.slogan {
+  font-size: 30px;
+  color: white;
+  /* font-style: italic; */
+  margin-top: 20px;
+}
+
+.mainContent {
+  margin-top: 20px;
+  max-width: 700px;
+  width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainContent p {
+  margin-top: 20px;
+}
+
+/* .sidebarOpenBtn {
+  box-shadow: 0px 0px 10px 0px #FFF;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: white;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: opacity 0.2s;
+} */
+
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 0;
+  height: 100vh;
+  transition: width 0.5s;
+  border-right: 1px solid black;
+  overflow: hidden;
+}
+
+.sidebarCloseBtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.cbar1 {
+  width: 35px;
+  height: 5px;
+  background-color: #000;
+  transform: rotate(45deg);
+  transform-origin: bottom left;
+}
+
+.cbar2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 5px;
+  background-color: #000;
+  transform: rotate(-45deg) translate(8px,-6px);
+  transform-origin: left;
+}
+
+/* .bodywrapper {
+  position: relative;
+} */
+
+.container {
+  cursor: pointer;
+  position: fixed;
+  top: 25px;
+  left: 30px;
+  background: white;
+  padding: 10px;
+  transition: 0.35s;
+}
+
+.bar1, .bar2, .bar3 {
+  /* box-shadow: 0 0 0px 1px rgba(255,255,255,0.8); */
+  width: 35px;
+  height: 5px;
+  background-color: #000;
+  margin: 6px 0;
+}
+
+li {
+  margin: 40px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+a:hover,
+a:focus {
+  /* text-shadow: 0 0 5px #000; */
+  text-decoration: underline overline;
+  /* font-weight: 700; */
+}
+
+ul {
+  list-style: none;
+}
+
+/* .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+} */
+
+
+</style>
+</head>
+<body>
+<!-- <div class="bodywrapper"> -->
+  
+<div class="sidebar">
+  <div class="sidebarCloseBtn" onclick="myfuncc2()">
+    <div class="cbar1"></div>
+    <div class="cbar2"></div>
+  </div>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+</div>
+
+
+
+<div class="banner">
+  <div class="bannerContent">
+    CompanyName
+    <div class="slogan">
+      Lorem ipsum dolor sit amet consectetur
+    </div>
+  </div>
+</div>
+
+<div class="container" onclick="myfuncc(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+<!-- <div class="sidebarOpenBtn" onclick="myfuncc()">
+  <i class="fas fa-bars fa-3x"></i>
+  <span class="sideBarOpenBtnText">Menu</span>
+</div> -->
+
+
+
+<div class="mainContent">
+  <h1>Title</h1>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore esse, minus accusantium deserunt quis tempora error. Quisquam quidem quo velit molestias fugit, excepturi mollitia explicabo sequi impedit, repellat inventore consequatur labore et eum est, assumenda quae veritatis nihil illum amet consectetur facilis in numquam earum. Quibusdam, eligendi vitae repellat aspernatur minus nisi eaque? Illum tenetur vel ut nesciunt iste accusamus temporibus possimus maxime nihil corporis quidem ipsam consequuntur voluptatibus quisquam magni placeat inventore numquam autem architecto qui, a repellat facere molestiae aspernatur. Possimus nihil impedit quae, nulla consectetur tenetur deserunt perspiciatis cupiditate incidunt minus in excepturi. Sint, nobis quos!</p>
+
+
+</div>
+
+
+<script>
+function myfuncc(x){
+  // console.log('hello');
+  let elem = document.querySelector('.sidebar');
+  elem.style.width = "200px";
+  x.style.opacity = "0";
+}
+
+function myfuncc2(){
+  // console.log('hello');
+  let elem = document.querySelector('.sidebar');
+
+  elem.style.width = "0";
+
+  elem = document.querySelector('.container');
+  elem.style.opacity = "1";
+
+}
+
+</script>
+<!-- <script>
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
+</script> -->
+<!-- </div> -->
+</body>
+</html>
