@@ -7,6 +7,9 @@
 
   Menu icon is obstructing text on iPhone 5. Fix it somehow.
 
+  change footer color to match banner
+
+  how come margin-right works on inline elements but not margin-top?
 
 -->
 
@@ -53,6 +56,7 @@
 }
 
 .mainContent {
+  text-align: justify;
   margin-top: 20px;
   max-width: 700px;
   width: 100vw;
@@ -191,27 +195,62 @@ ul {
 .footer {
   position: relative;
   background: rgb(30,36,50);
-  height: 100px;
+  /* height: 90px; */
   color: white;
+}
+
+
+
+.footercontent {
+  
+  /* background: pink; */
+
+  /* height: 90px; */
+  /* margin-top: 20px; */
+  max-width: 700px;
+  width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-bottom: 70px; */
+
+}
+
+.footercontent a {
+  display:inline-block;
+  margin-top: 20px;
+  color: white;
+  text-transform: capitalize;
+  margin-right: 10%;
+}
+
+.footercontent p {
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.footercontent span {
+  float: right;
 }
 
 
 .ffirstrow {
-  position: absolute;
+  /* position: absolute;
   left: 20%;
-  top: 20px;
+  top: 20px; */
   /* width: 50%; */
   /* margin-left: 30vh; */
   /* margin-left: 200px; */
   /* margin-right: 200px; */
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .ffirstrow a {
-  color: white;
+  /* color: white;
   margin-right: 7vw;
-  text-transform: capitalize;
+  text-transform: capitalize; */
 }
 
 /* a:focus {
@@ -220,12 +259,12 @@ ul {
 } */
 
 .fsecondrow {
-  position: absolute;
+  /* position: absolute;
   width: 50vw;
   top: 60px;
   left: 20%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .fsecondrow span {
@@ -233,17 +272,21 @@ ul {
 }
 
 @media only screen and (min-width: 1240px) {
-  .mainContent {
+  .mainContent,
+  .footercontent {
     max-width: 1000px;
   }
+  
 }
 @media only screen and (min-width: 1500px) {
-  .mainContent {
+  .mainContent,
+  .footercontent {
     max-width: 1300px;
   }
 }
 @media only screen and (min-width: 2000px) {
-  .mainContent {
+  .mainContent,
+  .footercontent {
     max-width: 1800px;
   }
 }
@@ -319,11 +362,10 @@ ul {
 
 <div class="footer">
 <div class="footercontent">
-<div class="ffirstrow"><a href="https://www.wikipedia.org">Home</a>  <a href="#">About</a> <a href="#">Contact</a> </div>
-<div class="fsecondrow"><span>CompanyName</span><span>Copyright © 2019</span> 
+<a href="https://www.wikipedia.org">Home</a>  <a href="#">About</a> <a href="#">Contact</a>
+<p>CompanyName<span>Copyright © 2019</span></p>
 </div>
 </div>
-
 
 <script>
 function myfuncc(x){
