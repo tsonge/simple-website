@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <!-- TODO: 
 
-  Scale down the CompanyName + slogan when small screen size
-
-  check if footer is collapsing?
+  repo: A simple, minimalistic, website layout with an animated sidebar menu. Fullly responsive. HTML/CSS. is our desc.
 
   Menu icon is obstructing text on iPhone 5. Fix it somehow.
 
-  change footer color to match banner
-
-  how come margin-right works on inline elements but not margin-top?
 
 -->
 
@@ -194,7 +189,7 @@ ul {
 
 .footer {
   position: relative;
-  background: rgb(30,36,50);
+  background: rgb(26,29,32);
   /* height: 90px; */
   color: white;
 }
@@ -288,6 +283,15 @@ ul {
   .mainContent,
   .footercontent {
     max-width: 1800px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .bannerContent {
+    font-size: 40px;
+  }
+  .slogan {
+    font-size: 20px;
   }
 }
 
