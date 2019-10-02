@@ -1,7 +1,19 @@
 <!DOCTYPE html>
+<!-- TODO: 
+
+  repo: A simple, minimalistic, website layout with an animated sidebar menu. Fullly responsive. HTML/CSS. is our desc.
+
+  Menu icon is obstructing text on iPhone 5. Fix it somehow.
+
+
+-->
+
+
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 * {
   margin: 0;
@@ -20,6 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .bannerContent{
@@ -38,6 +51,7 @@
 }
 
 .mainContent {
+  text-align: justify;
   margin-top: 20px;
   max-width: 700px;
   width: 100vw;
@@ -148,8 +162,7 @@ a {
   text-transform: uppercase;
 }
 
-a:hover,
-a:focus {
+a:hover {
   /* text-shadow: 0 0 5px #000; */
   text-decoration: underline overline;
   /* font-weight: 700; */
@@ -171,6 +184,116 @@ ul {
   transform: rotate(45deg) translate(-8px, -8px);
 } */
 
+
+/* footer color: RGB 30 36 50 */
+
+.footer {
+  position: relative;
+  background: rgb(26,29,32);
+  /* height: 90px; */
+  color: white;
+}
+
+
+
+.footercontent {
+  
+  /* background: pink; */
+
+  /* height: 90px; */
+  /* margin-top: 20px; */
+  max-width: 700px;
+  width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-bottom: 70px; */
+
+}
+
+.footercontent a {
+  display:inline-block;
+  margin-top: 20px;
+  color: white;
+  text-transform: capitalize;
+  margin-right: 10%;
+}
+
+.footercontent p {
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.footercontent span {
+  float: right;
+}
+
+
+.ffirstrow {
+  /* position: absolute;
+  left: 20%;
+  top: 20px; */
+  /* width: 50%; */
+  /* margin-left: 30vh; */
+  /* margin-left: 200px; */
+  /* margin-right: 200px; */
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.ffirstrow a {
+  /* color: white;
+  margin-right: 7vw;
+  text-transform: capitalize; */
+}
+
+/* a:focus {
+  text-decoration: none;
+  background: pink;
+} */
+
+.fsecondrow {
+  /* position: absolute;
+  width: 50vw;
+  top: 60px;
+  left: 20%;
+  display: flex;
+  justify-content: space-between; */
+}
+
+.fsecondrow span {
+  /* margin-right: 50vw; */
+}
+
+@media only screen and (min-width: 1240px) {
+  .mainContent,
+  .footercontent {
+    max-width: 1000px;
+  }
+  
+}
+@media only screen and (min-width: 1500px) {
+  .mainContent,
+  .footercontent {
+    max-width: 1300px;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .mainContent,
+  .footercontent {
+    max-width: 1800px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .bannerContent {
+    font-size: 40px;
+  }
+  .slogan {
+    font-size: 20px;
+  }
+}
 
 </style>
 </head>
@@ -241,6 +364,12 @@ ul {
 
 </div>
 
+<div class="footer">
+<div class="footercontent">
+<a href="https://www.wikipedia.org">Home</a>  <a href="#">About</a> <a href="#">Contact</a>
+<p>CompanyName<span>Copyright © 2019</span></p>
+</div>
+</div>
 
 <script>
 function myfuncc(x){
